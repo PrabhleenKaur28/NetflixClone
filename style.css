@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+body{
+    background-color: black;
+    background-image: url("imagesandvideos/Background.jpg");
+    background-repeat: no-repeat;
+    background-size:100%; 
+    /* to zoom the background image 160% instead of 100% */
+}
+.nav{
+    background-color: black;
+    position: absolute;
+    opacity:0.6;
+    height: 100%;
+    width: 100%;
+    z-index: -2; 
+    /* lesser z index div(a) is overlapped by more z index div(b) so a is given position: absolute; and b is given position: relative; */
+}
+.navbar{
+    background-color: transparent;
+    position:relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.navlogo{
+    height: 45px;
+    width: 200px;
+    margin-left: 165px;
+}
+.logo{
+    background-image: url("imagesandvideos/Netflix_logo.png");
+    height: 44.5px;
+    width: 158px;
+    background-size: cover;
+    margin-top: 2px;
+    margin-left: 4px;
+}
+.navbox{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    justify-content: flex-end;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+.language{
+    display: flex;
+    align-items: center;
+    padding: 6px 32px;
+}
+select{
+    height: 34px;
+    width: 100px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    padding: 2px 0px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+select:active{
+    border: 2px solid white;
+}
+.signin{
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border:none;
+    border-radius: 4px;
+    height: 24px;
+    width: 50px;
+    padding:4px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 30px;
+}
+.signin:hover{
+    cursor: pointer;
+    background-color: rgb(200, 8, 17);
+}
+.content{
+    color: white;
+    height: 500px;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+.heading{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+.subheading{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.subsubheading{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 24px;
+}
+.page1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.page1 input{
+    font-size: 16px;
+    padding-left: 15px;
+}
+#email{
+    width: 351px;
+    height: 52px;
+    background-color: rgba(28, 28, 28, 0.682);
+    opacity: 0.9;
+    border: 0.8px solid rgb(142, 142, 142);
+    border-radius: 4px;
+    color: rgb(226, 225, 225)
+
+}
+/* .emailadd{
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 15px;
+    font-size: 16px;
+    color: rgb(164, 163, 163);
+    transition-property:font-size;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transform: translateY(-8px);
+    animation-name: "aniemail";
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+} */
+/* @keyframes aniemail{
+    from{
+        font-size: 16px;
+    }
+    to{
+        font-size: 9px;
+    }
+} */
+#email::placeholder{
+    color: rgb(254, 254, 254);
+    font-size: 16px;
+    margin-left: 15px;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    /* transform: translateY(-8px); */
+    animation-name: "animationemail";
+    animation-duration: 2 s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+@keyframes animationemail{
+    from{
+        font-size: 16px;
+    }
+    to{
+        font-size: 9px;
+    }
+}
+.button{
+    background-color: rgb(229, 9, 20);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 56px;
+    width: 205px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(200, 8, 17);
+}
+.button i{
+    font-size: 2.2rem;
+    font-weight: lighter;
+}
+.divider{
+    height: 8px;
+    background-color: rgb(39, 39, 39);
+}
+.content1{
+    background-color: black;
+    height: 580px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media  screen and (max-width:790px) {
+    .content1{
+        flex-wrap: wrap;
+    }    
+}
+.text1{
+    height:250px;
+    width: 610px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    line-height: 1.3;
+    padding: 40px;
+}
+.box1{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.box1 img{
+    width: 460px;
+    /* background-image: url("imagesandvideos/image1.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 60px;
+    position: absolute;
+    z-index: 10;
+}
+.box1 video{
+    position: relative;
+    height: 200px;
+    left: 20px;
+}
+.content12{
+    height: 580px;
+}
+.box2{
+    height:430px;
+    width: 500px;
+    background-image: url("imagesandvideos/image2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.text2{
+    height:250px;
+    width: 590px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    line-height: 1.3;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.download{
+    background-color: black;
+    color: white;
+    height: 84px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    transform:translate(310px,-215px);
+    padding: 8px 20px 8px 12px;
+    border: 1.5px solid rgb(142, 142, 142);
+    border-radius: 0.75rem;
+}
+.downloadimage{
+    background-image: url("imagesandvideos/image21.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 78px;
+    width: 56px;
+}
+.downloadcontent{
+    margin-left: 15px;
+    margin-right: 50px;
+    font-size: 0.95rem;
+}
+.white{
+    font-weight: bolder;
+}
+.blue{
+    color: #0071eb
+}
+.download i{
+    font-size: xx-large;
+}
+.text3{
+    height:250px;
+    width: 550px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    line-height: 1.3;
+    margin-right: 55px;
+    margin-bottom: 40px;
+}
+.box3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box3 img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    width: 650px;
+    position: absolute;
+    z-index: 10;
+}
+.box3 video{
+    position: relative;
+    height: 250px;
+    width: 400px;
+    bottom: 50px;
+}
+.box4{
+    background-image: url("imagesandvideos/image4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 430px;
+    width: 550px;
+    margin-bottom: 20px;
+}
+.text4{
+    height:250px;
+    width: 590px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    line-height: 1.3;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.content2{
+    background-color: black;
+    color: white;
+    padding: 72px 0px;
+}
+.quesheading{
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+}
+.questions{
+    margin-top: 24px;
+    margin-left: 200px;
+}
+.ques{
+    padding: 1.5rem 1.5rem;
+    background-color: rgb(45,45,45);
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 2.5rem;
+}
+.ques i{
+    font-size: 30px;
+}
+.ques:hover{
+    cursor: pointer;
+    background-color: rgb(65,65,65);
+}
+.membership{
+    display: block;
+    margin-top: 45px;
+    text-align: center;
+    align-items: center;
+}
+.memheading{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.content3{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 4.5rem 0rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 8rem;
+    padding-right: 25rem;
+}
+.contact{
+    padding-left: 4.7rem;
+}
+.content31{
+    display: flex;
+    justify-content: space-around;
+}
+.content31 li{
+    margin-top: 1rem;
+}
+.content3 a{
+    color: rgba(255, 255, 255, 0.7);
+}
+.language1{
+    display: flex;
+    align-items: center;
+    padding: 6px 0px;
+}
